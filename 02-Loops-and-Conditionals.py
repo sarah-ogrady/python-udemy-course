@@ -4,8 +4,6 @@ def sentence_maker(string):
   else:
     return '{}.'.format(string.capitalize())
 
-# print(sentence_maker(input("Say something:")))
-
 userList = []
 
 while True:
