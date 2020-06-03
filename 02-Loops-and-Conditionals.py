@@ -1,5 +1,5 @@
 def sentence_maker(string):
-  if string.startswith('how') or string.startswith('who') or string.startswith('what') or string.startswith('why') or string.startswith('when') or string.startswith('where'):
+  if string.startswith(('how', 'who', 'what', 'why', 'when', 'where')):
     return string.capitalize() + '?'
   else:
     return string.capitalize() + '.'
