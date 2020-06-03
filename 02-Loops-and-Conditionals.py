@@ -1,8 +1,8 @@
 def sentence_maker(string):
   if string.startswith(('how', 'who', 'what', 'why', 'when', 'where')):
-    return string.capitalize() + '?'
+    return '{}?'.format(string.capitalize())
   else:
-    return string.capitalize() + '.'
+    return '{}.'.format(string.capitalize())
 
 # print(sentence_maker(input("Say something:")))
 
