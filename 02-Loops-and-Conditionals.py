@@ -16,6 +16,6 @@ while True:
   else:
     userList.append(new_words)
 
-print(" ".join(map(str, userList)))
+print(" ".join(userList))
 
 
