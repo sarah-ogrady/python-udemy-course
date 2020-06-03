@@ -12,11 +12,10 @@ while True:
   user_words = input("Say something:")
   new_words = sentence_maker(user_words)
   if user_words == "/end":
-    print(" ".join(map(str, userList)))
     break
   else:
     userList.append(new_words)
 
-
+print(" ".join(map(str, userList)))
 
 
