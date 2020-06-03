@@ -15,5 +15,3 @@ while True:
     userList.append(new_words)
 
 print(" ".join(userList))
-
-
