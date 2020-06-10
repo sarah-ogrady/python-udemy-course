@@ -9,9 +9,13 @@ database = "ardit700_pm1database"
 
 
 cursor = con.cursor()
-
-query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = 'inlay'")
+word = input("Enter word: ")
+query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = '%s' " % word)
 
 results = cursor.fetchall()
 
-print(results[0])
+if results:
+  for result in results:
+    print(result[1])
+else:
+  print("No word found")
