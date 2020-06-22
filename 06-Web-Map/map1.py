@@ -1,5 +1,6 @@
 import folium
 import pandas
+import fontawesome as fa
 
 data = pandas.read_csv("Volcanoes.txt")
 lat = list(data["LAT"])
@@ -29,7 +30,7 @@ def what_color(elevation):
 
 for lt, ln, el, nm in  zip(lat, lon, elev, name):
     iframe = folium.IFrame(html=html % (nm, nm, el), width=200, height=100)
-    fg.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon=folium.Icon(what_color(el))))
+    fg.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon=folium.Icon(color=what_color(el), icon='fa-tree', prefix='fa')))
 
 map.add_child(fg)
 map.save("Map1.html")
