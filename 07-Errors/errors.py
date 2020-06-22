@@ -16,4 +16,7 @@ print(a + b)
 # 3) Include the entire error traceback
 # 4) Highlight your code
 
+#try: -> usually return this
+#except ZeroDivisionError: -> do the code below if this error occurs
+
 
