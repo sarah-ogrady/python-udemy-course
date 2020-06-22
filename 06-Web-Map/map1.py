@@ -16,9 +16,20 @@ map = folium.Map(location=[38.2, -99.1], zoom_start=6, tiles="Stamen Terrain")
 
 fg = folium.FeatureGroup(name="My Map")
 
+def what_color(elevation):
+  if elevation <= 1000:
+    return 'lightblue'
+  elif elevation > 1000 and elevation < 2000:
+    return 'blue'
+  elif elevation >= 2000 and elevation <= 3000:
+    return 'cadetblue'
+  else:
+    return 'darkblue'
+
+
 for lt, ln, el, nm in  zip(lat, lon, elev, name):
     iframe = folium.IFrame(html=html % (nm, nm, el), width=200, height=100)
-    fg.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon=folium.Icon('blue')))
+    fg.add_child(folium.Marker(location=[lt, ln], popup=folium.Popup(iframe), icon=folium.Icon(what_color(el))))
 
 map.add_child(fg)
 map.save("Map1.html")
