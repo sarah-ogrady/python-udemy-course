@@ -1,4 +1,5 @@
 import sqlite3
+import psycopg2
 
 def create_table():
     conn=sqlite3.connect("lite.db")
