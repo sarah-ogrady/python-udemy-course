@@ -31,7 +31,16 @@ def search(title='',author='',year='',isbn=''):
     conn.close()
     return rows
 
+def delete(id):
+  conn=sqlite3.connect("books.db")
+  cur=conn.cursor()
+  cur.execute("DELETE FROM book WHERE id=?",(id,)) #you need that extra comma there!
+  conn.commit()
+  conn.close()
+
 connect()
-insert("The Sun and the sky","Someone",1934,8973459457)
+insert("Oh god no","Percy Puddleduck",1937,8937455637)
 print(view())
-print(search(author='Someone'))
+delete(3)
+print(view())
+# print(search(author='Someone'))
