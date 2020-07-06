@@ -1,0 +1,3 @@
+([('frontend',
+   '/Users/sarahogrady/code/sarah-ogrady/python-udemy-course/11-Database-App/dist/frontend',
+   'EXECUTABLE')],)
