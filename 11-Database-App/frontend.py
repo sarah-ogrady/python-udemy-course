@@ -18,6 +18,7 @@ from tkinter import *
 import backend
 
 def get_selected_row(event):
+  try:
     global selected_tuple
     index=list1.curselection()[0]
     selected_tuple=list1.get(index)
@@ -29,6 +30,8 @@ def get_selected_row(event):
     e3.insert(END, selected_tuple[3])
     e4.delete(0,END)
     e4.insert(END, selected_tuple[4])
+  except IndexError:
+        pass
 
 def view_command():
     list1.delete(0,END)
@@ -51,6 +54,8 @@ def delete_command():
     backend.delete(selected_tuple[0])
 
 window=Tk()
+
+window.wm_title("BookStore")
 
 l1=Label(window,text='Title')
 l1.grid(row=0,column=0)
