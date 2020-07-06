@@ -47,8 +47,8 @@ def update(id,title,author,year,isbn):
 
 connect()
 # insert("Boom boom pow","Human being",1999,89990455637)
-print(view())
+# print(view())
 # delete(3)
-update(7, 'Boom Boom Woweeee','Human being', 1999, 89990455637)
-print(view())
+# update(7, 'Boom Boom Woweeee','Human being', 1999, 89990455637)
+# print(view())
 # print(search(author='Someone'))
